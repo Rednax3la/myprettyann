@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For Ann ❤️</title>
+    <link rel="icon" type="image/jpeg" href="https://i.ibb.co/93ht9PZw/IMG-20251215-WA0004.jpg">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Raleway:wght@300;400;500&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Raleway', sans-serif;
+            background: linear-gradient(135deg, #0c1b33 0%, #1a2b4a 100%);
+            color: #f0e6ff;
+            line-height: 1.7;
+            overflow-x: hidden;
+            min-height: 100vh;
+            position: relative;
+        }
+
+        .floating-shapes {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            overflow: hidden;
+            opacity: 0.05;
+        }
+
+        .shape {
+            position: absolute;
+            background: linear-gradient(45deg, #ff6b9d, #c44569);
+            border-radius: 50%;
+            opacity: 0.3;
+            animation: float 20s infinite linear;
+        }
+
+        @keyframes float {
+            0% {
+                transform: translateY(0) rotate(0deg) scale(1);
+            }
+            33% {
+                transform: translateY(-40px) rotate(120deg) scale(1.1);
+            }
+            66% {
+                transform: translateY(30px) rotate(240deg) scale(0.9);
+            }
+            100% {
+                transform: translateY(0) rotate(360deg) scale(1);
+            }
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        .message-card {
+            background: rgba(12, 27, 51, 0.9);
+            border-radius: 20px;
+            padding: 50px 40px;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+            border: 1px solid rgba(255, 107, 157, 0.2);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .message-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, #ff6b9d, #c44569, #ff6b9d);
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 50px;
+            padding-bottom: 30px;
+            border-bottom: 1px solid rgba(255, 107, 157, 0.2);
+        }
+
+        .title {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 3.5rem;
+            font-weight: 600;
+            color: #ff6b9d;
+            margin-bottom: 15px;
+            text-shadow: 0 0 10px rgba(255, 107, 157, 0.3);
+        }
+
+        .subtitle {
+            font-style: italic;
+            color: #c44569;
+            font-size: 1.1rem;
+            margin-top: 10px;
+        }
+
+        .message-section {
+            margin-bottom: 40px;
+        }
+
+        .section-title {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.6rem;
+            color: #ff6b9d;
+            margin-bottom: 25px;
+            position: relative;
+            padding-left: 20px;
+        }
+
+        .section-title::before {
+            content: '❧';
+            position: absolute;
+            left: 0;
+            color: #c44569;
+        }
+
+        .text {
+            font-size: 1.1rem;
+            color: #e6e1ff;
+            margin-bottom: 20px;
+            padding-left: 20px;
+            position: relative;
+        }
+
+        .text::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: linear-gradient(to bottom, transparent, #ff6b9d, transparent);
+            opacity: 0.3;
+        }
+
+        .highlight {
+            color: #ff6b9d;
+            font-weight: 500;
+        }
+
+        .numbered-list {
+            list-style: none;
+            margin: 25px 0;
+            padding-left: 20px;
+        }
+
+        .numbered-list li {
+            margin-bottom: 15px;
+            padding-left: 30px;
+            position: relative;
+        }
+
+        .numbered-list li::before {
+            content: attr(data-number);
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 24px;
+            height: 24px;
+            background: #ff6b9d;
+            color: #0c1b33;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 0.9rem;
+        }
+
+        .heart {
+            color: #ff6b9d;
+            font-size: 1.2rem;
+        }
+
+        .postscript {
+            background: rgba(255, 107, 157, 0.1);
+            border-radius: 12px;
+            padding: 25px;
+            margin: 30px 0;
+            border: 1px solid rgba(255, 107, 157, 0.3);
+        }
+
+        .postscript p {
+            margin-bottom: 10px;
+        }
+
+        .signature {
+            text-align: right;
+            margin-top: 50px;
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.8rem;
+            color: #ff6b9d;
+            position: relative;
+            padding-right: 100px;
+        }
+
+        .signature::before {
+            content: '';
+            position: absolute;
+            right: 0;
+            top: 50%;
+            width: 80px;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, #ff6b9d);
+        }
+
+        .too-late {
+            text-align: center;
+            margin-top: 10px;
+            font-size: 0.9rem;
+            color: rgba(255, 107, 157, 0.4);
+            font-style: italic;
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 50px;
+            font-size: 0.9rem;
+            color: rgba(255, 255, 255, 0.5);
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 20px 15px;
+            }
+            
+            .message-card {
+                padding: 30px 20px;
+            }
+            
+            .title {
+                font-size: 2.5rem;
+            }
+            
+            .section-title {
+                font-size: 1.4rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="floating-shapes" id="shapesContainer"></div>
+
+    <div class="container">
+        <div class="message-card">
+            <div class="header">
+                <h1 class="title">Hey Ann ❤️</h1>
+                <p class="subtitle">The illustration this time is from 'Scott Pilgrim vs The World' - a hilarious romance about battling exes 😂</p>
+            </div>
+
+            <div class="message-section">
+                <p class="text">Hey Ann,</p>
+                <p class="text">You know what this is 😊 So brace yourself, girl 💃🏾</p>
+            </div>
+
+            <div class="message-section">
+                <p class="text">I'm writing this to clear the air after our last conversation — you know, the one where you were grilling me like a detective 😂 But first, let me just say: I really, really enjoyed my time with you. Honestly, I needed that. Eight whole hours with you, and I still wanted more. That's saying something.</p>
+            </div>
+
+            <div class="message-section">
+                <h2 class="section-title">Our "Secret" Went Public</h2>
+                <p class="text">Let's talk about how our "secret" became public knowledge today:</p>
+                <ol class="numbered-list">
+                    <li data-number="1">You accidentally had a whole chat and exchanged numbers with my mum without even knowing it was her 😂</li>
+                    <li data-number="2">We took that picture where we made eye contact using the church camera (everyone will see that)</li>
+                    <li data-number="3">We held hands right in front of Henry and the rest (subtlety isn't our strong suit apparently)</li>
+                    <li data-number="4">We spent so much time together, and I kept having to pause to greet people along the way... some whom I know will ask.</li>
+                </ol>
+                <p class="text">Do I have a problem with any of that? Not at all. I'd do it all again in a heartbeat 😂, especially if it meant another 8 hours with you.</p>
+            </div>
+
+            <div class="message-section">
+                <h2 class="section-title">Signs & Synchronicity</h2>
+                <p class="text">Oh, and about the poker — winning twice among 10+ people? That never happens to me! The only reason I got Hope to play is because she's actually the best in our family. Another sign maybe? 🙃</p>
+                <p class="text">Also, I'm sorry about that joker card move. I felt bad right after, because I took a risk and you got the short end of it.</p>
+            </div>
+
+            <div class="message-section">
+                <h2 class="section-title">The Heart of the Matter</h2>
+                <p class="text">First, I'm really glad you told me how you were feeling. Thank you for that, and I'm not upset at all. Honestly? I found it kinda sweet that you were feeling insecure/jealous — it's a subtle reminder that you actually like me 😉</p>
+                
+                <p class="text">I need you to really hear this: there's absolutely nothing to worry about with Faith. And I'm not just saying that because it's what you want to hear. I'm saying it because seeing you worried makes me worry too. I care about how you feel — all the emotions that come with insecurity — and if I needed to let go of a friendship to make you feel secure, I would do it a thousand times over, without thinking twice.</p>
+                
+                <p class="text">(If we were still sitting together right now, you'd probably ask "what about the 1001st time?" 😂 But you know what I mean — it's just an expression.)</p>
+                
+                <p class="text">You don't need to imagine worst-case scenarios. The truth is, we both could have ended up with anyone, but here we are — you and me. <span class="heart">❤️</span> So when you asked me to "put you out of the picture" — that was hard, because I'd have to ignore some really beautiful truths about us. 'Us' isn't something I can just pretend away.</p>
+                
+                <p class="text">And no, you're not filling anyone's shoes in my life. Actually, no one could fill yours atp 😭 Faith and I don't have some "special bond" just because we're both into tech. We're into completely different areas anyway. And no, I've never held hands with her. Honestly, Faith and Ashley will tell you — I don't even do hugs with girls on campus. It's always just daps.</p>
+                
+                <p class="text">Something else you should know: I was uncertain about maintaining friendship with Faith after campus. Not until YOU came along. And like I said, I wouldn't hesitate to let that friendship go if I had to.</p>
+                
+                <p class="text">Look, I get why you might think there's something there — I have mentioned her a few times. But the only reason I brought her up was because I thought maybe you'd want to reconnect with her one day. That can totally wait, or not happen at all if you're still uncomfortable with it.</p>
+                
+                <p class="text">Just to be super clear: the whole double date idea was only so you two could reconnect, and honestly, I thought it'd be fun to show off how amazing we are together 😂 I really think you and I have the potential to make other couples be third wheels.</p>
+            </div>
+
+            <div class="message-section">
+                <h2 class="section-title">One More Thing...</h2>
+                <p class="text">I didn't ask for a kiss just to change the subject. If I'm being completely honest, it had been on my mind for a while. That just happened to be the one moment all day when we were completely alone. If I rushed it, I'm sorry. Ready when you are.</p>
+                
+                <p class="text">I really hope this helps you feel better. And please, never hold back if something's bothering you. The thought of losing you scares me too, you know?</p>
+            </div>
+
+            <div class="postscript">
+                <h2 class="section-title">P.S.</h2>
+                <p class="text">My plan to get you to church next Sunday involves the use of a certain word. The one that starts with the 12th letter of the alphabet?</p>
+            </div>
+
+            <div class="signature">
+                Love,<br>
+                Alexander<span class="heart">❤️</span>
+            </div>
+            
+            <div class="too-late">
+                [Too late, lol]
+            </div>
+        </div>
+
+        <div class="footer">
+            Crafted with heartfelt intention
+        </div>
+    </div>
+
+    <script>
+        // Create floating shapes in the background
+        const shapesContainer = document.getElementById('shapesContainer');
+        
+        for (let i = 0; i < 20; i++) {
+            const shape = document.createElement('div');
+            shape.className = 'shape';
+            
+            const size = 30 + Math.random() * 70;
+            shape.style.width = `${size}px`;
+            shape.style.height = `${size}px`;
+            shape.style.left = `${Math.random() * 100}%`;
+            shape.style.top = `${Math.random() * 100}%`;
+            shape.style.animationDelay = `${Math.random() * 20}s`;
+            
+            shapesContainer.appendChild(shape);
+        }
+    </script>
+</body>
+</html>
